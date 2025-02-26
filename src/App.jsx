@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 
-import Co_overlayNavibar from './pages/components/overlayNavibar/overlayNavibar';
+import Co_newsletter from './pages/components/newsletter/newsletter';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={styles.main_App}>
 
-      <Co_overlayNavibar />
+      <Co_newsletter />
 
     </div>
   )
