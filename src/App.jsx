@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 
-import Co_newsletter from './pages/components/newsletter/newsletter';
+import Co_parent from './pages/components/zustand/samples/parent/parent';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={styles.main_App}>
 
-      <Co_newsletter />
+      <Co_parent />
 
     </div>
   )
