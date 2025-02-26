@@ -1,11 +1,16 @@
-import './App.css'
+import styles from './App.module.css';
+
+import Co_overlayNavibar from './pages/components/overlayNavibar/overlayNavibar';
+
 
 function App() {
 
   return (
-    <>
-      <p>this project test was made during 10 static websites Arc.</p>
-    </>
+    <div className={styles.main_App}>
+
+      <Co_overlayNavibar />
+
+    </div>
   )
 }
 

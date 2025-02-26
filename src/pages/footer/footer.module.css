@@ -1,0 +1,10 @@
+div.main_footer {
+  width: 50%;
+  height: 200px;
+  background: lightgoldenrodyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=footer.module.css.map */

@@ -1,0 +1,12 @@
+.main {
+  border: 1px solid black;
+  margin: 15px 0 0 0;
+  padding: 10px;
+}
+.main p {
+  margin: 3px 0 3px 0;
+  padding: 0px;
+  font-family: Inter;
+}
+
+/*# sourceMappingURL=student.module.css.map */

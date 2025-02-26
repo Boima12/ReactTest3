@@ -1,0 +1,223 @@
+div.main_HorizontalBar2Context {
+    overflow-x: hidden;     // position: fixed; issue
+
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    div.context_side {
+        width: 120px;
+        height: 100vh;
+        background: #222;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-shrink: 0;   
+        
+        div.bookmark {
+            height: 102px;
+            opacity: 0.7;   
+            cursor: pointer; 
+            
+            transition: all 1s;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            align-self: stretch;    
+
+            p {
+                color: #FFF;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;                
+            }
+
+            &:hover {
+                opacity: 0.9;
+                background: #000;  
+            }
+
+            &.actived {
+                cursor: default;
+                opacity: 0.9;
+                background: #000;                
+            }
+        }
+    }
+
+    div.context_main {
+        width: calc(100% - 120px);
+        margin-left: 120px;
+        // padding: 12px 24px;
+        box-sizing: border-box;
+        background: #000;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 128px;  
+        
+        div.context_side_nav {
+            width: 100%;
+            height: 34px;
+            background: black;
+
+            transition: all 0.4s;
+
+            z-index: 10;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            // display: flex;
+            align-items: center; 
+            
+            display: none;
+
+            div.bookmark {
+                height: 100%;
+                cursor: pointer;
+
+                transition: all 1s;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex: 1 0 0;      
+                
+                p {
+                    transition: all 1s;
+
+                    color: #FFF;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;                    
+                }
+
+                &:hover {
+                    background: #C2C2C2;
+
+                    p {
+                        color: #000;
+                    }
+                }
+
+                &.actived {
+                    cursor: default;
+                    background: #C2C2C2;
+
+                    p {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        // delete these div.component(s)
+        div.component1 {
+            width: 100%;
+            height: 1000px;
+
+            background: lightgoldenrodyellow;
+        }
+
+        div.component2 {
+            width: 100%;
+            height: 1000px;
+
+            background: lightcoral;
+        }
+
+        div.component3 {
+            width: 100%;
+            height: 1000px;
+
+            background: lightgreen;
+        }
+
+        div.component4 {
+            width: 100%;
+            height: 1000px;
+
+            background: lightskyblue;
+        }
+    }
+
+}
+
+
+@mixin screen320 {
+    div.main_HorizontalBar2Context {
+        div.context_side {
+            display: none;
+        }
+
+        div.context_main {
+            width: 100%;
+            margin-left: 0;
+            gap: 64px;
+
+            div.context_side_nav {
+                display: flex;
+            }
+        }
+    }
+}
+
+@mixin screen600 {
+    @include screen320;
+
+    div.main_HorizontalBar2Context {
+        div.context_main {
+            gap: 128px;
+        }
+    }
+}
+
+
+/* Extra small devices (phones, below 600px) */
+@media only screen and (min-width: 320px) and (max-width: 599.9px) {
+    @include screen320;
+}
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767.9px) {
+    @include screen600;
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991.9px) {
+
+} 
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199.9px) {
+
+} 
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1535.9px) {
+
+} 
+
