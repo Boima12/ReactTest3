@@ -1,4 +1,4 @@
-div.main_HorizontalBar2Context {
+div.main_sideTopNavibar_tracking {
     overflow-x: hidden;     // position: fixed; issue
 
     width: 100%;
@@ -160,7 +160,7 @@ div.main_HorizontalBar2Context {
 
 
 @mixin screen320 {
-    div.main_HorizontalBar2Context {
+    div.main_sideTopNavibar_tracking {
         div.context_side {
             display: none;
         }
@@ -180,7 +180,7 @@ div.main_HorizontalBar2Context {
 @mixin screen600 {
     @include screen320;
 
-    div.main_HorizontalBar2Context {
+    div.main_sideTopNavibar_tracking {
         div.context_main {
             gap: 128px;
         }

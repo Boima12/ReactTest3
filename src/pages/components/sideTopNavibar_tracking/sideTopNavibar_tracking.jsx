@@ -1,8 +1,8 @@
-import styles from './horizontalBar2Context.module.css';
+import styles from './sideTopNavibar_tracking.module.css';
 import { useState, useRef, useEffect } from 'react';
 
 
-function Co_horizontalBar2Context() {
+function Co_sideTopNavibar_tracking() {
   const [pageSection, setPageSection] = useState(1);
   const component1Ref = useRef();
   const component2Ref = useRef();
@@ -71,7 +71,7 @@ function Co_horizontalBar2Context() {
   };
 
   return (
-    <div className={styles.main_HorizontalBar2Context}>
+    <div className={styles.main_sideTopNavibar_tracking}>
       <div className={styles.context_side}>
         <div className={`${styles.bookmark} ${pageSection == 1 ? styles.actived : ""}`} onClick={scrollToComponent1}>
           <p>bookmark 1</p>
@@ -120,4 +120,4 @@ function Co_horizontalBar2Context() {
   );
 }
 
-export default Co_horizontalBar2Context
+export default Co_sideTopNavibar_tracking
