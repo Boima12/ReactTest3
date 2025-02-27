@@ -1,0 +1,71 @@
+div.main_toggleList {
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.main_toggleList ul.menu1 {
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+div.main_toggleList ul.menu1 li {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding-left: 15px;
+  cursor: pointer;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+div.main_toggleList ul.menu1 li p {
+  font-family: Inter;
+  font-size: 16px;
+}
+div.main_toggleList ul.menu1 li .ic {
+  color: #000;
+}
+div.main_toggleList ul.menu1 li .ic:nth-of-type(1) {
+  width: 10.002px;
+  height: 14.004px;
+}
+div.main_toggleList ul.menu1 li .ic:nth-of-type(2) {
+  width: 18.004px;
+  height: 14.004px;
+  display: none;
+}
+div.main_toggleList ul.menu1 li:hover {
+  background: lightgrey;
+  padding-left: 25px;
+}
+div.main_toggleList ul.menu1 ul.menu1_1 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all 0.5s;
+  overflow: hidden;
+  height: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  display: none;
+}
+div.main_toggleList ul.menu1 ul.menu1_1 li {
+  padding-left: 30px;
+}
+div.main_toggleList ul.menu1 ul.menu1_1 li:hover {
+  background: lightgrey;
+  padding-left: 40px;
+}
+div.main_toggleList ul.menu1 ul.menu1_1.open {
+  height: 200px;
+}
+
+/*# sourceMappingURL=toggleList.module.css.map */

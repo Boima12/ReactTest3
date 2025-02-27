@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 
-import Co_parent from './pages/components/zustand/samples/parent/parent';
+import Co_toggleList from './pages/components/toggleList/toggleList';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={styles.main_App}>
 
-      <Co_parent />
+      <Co_toggleList />
 
     </div>
   )
