@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 
-import Co_topSideNavibar from './pages/components/topSideNavibar/topSideNavibar';
+import Co_sideSideNavibar from './pages/components/sideSideNavibar/sideSideNavibar';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={styles.main_App}>
 
-      <Co_topSideNavibar />
+      <Co_sideSideNavibar />
 
     </div>
   )
