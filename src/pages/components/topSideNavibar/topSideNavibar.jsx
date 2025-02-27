@@ -1,17 +1,17 @@
-import styles from './overlayNavibar.module.css';
+import styles from './topSideNavibar.module.css';
 import { useRef } from 'react';
 import { useToggleCollapse } from '~/src/utilities/hooks/useToggleCollapse/useToggleCollapse';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-function Co_overlayNavibar() {
+function Co_topSideNavibar() {
 
     // context_top_collapse toggle
     const context_top_collapseRef = useRef();
     const { toggle: triggerContext_top_collapse } = useToggleCollapse(styles, context_top_collapseRef, 500);
 
     return (
-        <div className={styles.main_overlayNavibar}>
+        <div className={styles.main_topSideNavibar}>
             <div className={styles.context_top}>
                 <a>Link 1</a>
                 <a>Link 2</a>
@@ -56,4 +56,4 @@ function Co_overlayNavibar() {
     );
 }
 
-export default Co_overlayNavibar;
+export default Co_topSideNavibar;

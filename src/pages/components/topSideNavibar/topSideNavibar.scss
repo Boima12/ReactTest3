@@ -3,7 +3,7 @@ $context_top_nav_spacer_height: 60px;
 
 
 
-div.main_overlayNavibar {
+div.main_topSideNavibar {
     width: 100%;
 
     display: flex;
@@ -245,7 +245,7 @@ div.main_overlayNavibar {
 
 
 @mixin screen320 {
-    div.main_overlayNavibar {
+    div.main_topSideNavibar {
         div.context_top, div.context_top_spacer {
             display: none;
         }
