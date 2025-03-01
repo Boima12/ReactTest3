@@ -1,25 +1,5 @@
-div.main_sideSideNavibar {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;  
-    
-    & > div.context_side {
-        width: 220px;
-        height: 100vh;
-        background: white;
-        overflow: scroll;
-
-        z-index: 101;
-        position: fixed;
-        top: 0;
-        left: 0;
-
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;       
-
+@mixin context_side_style {
+    & {
         a {
             text-decoration: none;
 
@@ -46,7 +26,34 @@ div.main_sideSideNavibar {
                 padding: 0 15px 0 25px;
                 background: lightgrey;                
             }
-        }
+        }        
+    }
+}
+
+
+div.main_sideSideNavibar {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    
+    & > div.context_side {
+        width: 220px;
+        height: 100vh;
+        background: white;
+        overflow: scroll;
+
+        z-index: 101;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;       
+
+        @include context_side_style;
     }
 
     
@@ -132,6 +139,8 @@ div.main_sideSideNavibar {
             flex-shrink: 0;
             align-self: stretch;            
 
+            @include context_side_style;
+
             div.heading {
                 height: 50px;
                 padding: 0px 22px 0px 16px;
@@ -153,33 +162,6 @@ div.main_sideSideNavibar {
                     &:hover {
                         color: darkgrey;
                     }              
-                }
-            }
-
-            a {
-                text-decoration: none;
-
-                height: 40px;
-                padding: 0px 15px;
-                cursor: pointer;
-
-                transition: all 0.4s;
-
-                display: flex;
-                align-items: center;
-                align-self: stretch;
-                flex-shrink: 0;                 
-                
-                color: #000;
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal; 
-                
-                &:hover {
-                    padding: 0px 15px 0px 30px;
-                    background: #C6C6C6;
                 }
             }
         }
