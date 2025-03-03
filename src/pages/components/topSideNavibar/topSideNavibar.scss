@@ -10,7 +10,7 @@ div.main_topSideNavibar {
     flex-direction: column;
     align-items: flex-start;  
     
-    & > div.context_top {
+    div.context_top {
         width: 100%;
         height: $context_top_spacer_height;
         box-sizing: border-box;
@@ -46,7 +46,7 @@ div.main_topSideNavibar {
             font-weight: 400;
             line-height: normal;   
 
-            &:hover {
+            &:hover, &.actived {
                 color: #000;
                 background: #C6C6C6;                
             }
@@ -125,7 +125,7 @@ div.main_topSideNavibar {
             top: 0px;  
         }
 
-        div.context_top {
+        div.context_side {
             width: 300px;
             background: #FFF;      
             
@@ -187,13 +187,17 @@ div.main_topSideNavibar {
                     padding: 0px 15px 0px 30px;
                     background: #C6C6C6;
                 }
+
+                &.actived {
+                    background: #C6C6C6;
+                }
             }
         }
 
         &.open {
             opacity: 1;
 
-            div.context_top {
+            div.context_side {
                 transform: translateX(0);
             }
         }

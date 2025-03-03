@@ -4,7 +4,7 @@ div.main_topSideNavibar {
   flex-direction: column;
   align-items: flex-start;
 }
-div.main_topSideNavibar > div.context_top {
+div.main_topSideNavibar div.context_top {
   width: 100%;
   height: 60px;
   box-sizing: border-box;
@@ -18,7 +18,7 @@ div.main_topSideNavibar > div.context_top {
   align-items: center;
   flex-shrink: 0;
 }
-div.main_topSideNavibar > div.context_top a {
+div.main_topSideNavibar div.context_top a {
   text-decoration: none;
   height: 100%;
   padding: 0px 12px;
@@ -34,7 +34,7 @@ div.main_topSideNavibar > div.context_top a {
   font-weight: 400;
   line-height: normal;
 }
-div.main_topSideNavibar > div.context_top a:hover {
+div.main_topSideNavibar div.context_top a:hover, div.main_topSideNavibar div.context_top a.actived {
   color: #000;
   background: #C6C6C6;
 }
@@ -91,7 +91,7 @@ div.main_topSideNavibar div.context_top_collapse div.overlay {
   left: 0px;
   top: 0px;
 }
-div.main_topSideNavibar div.context_top_collapse div.context_top {
+div.main_topSideNavibar div.context_top_collapse div.context_side {
   width: 300px;
   background: #FFF;
   z-index: 103;
@@ -103,7 +103,7 @@ div.main_topSideNavibar div.context_top_collapse div.context_top {
   flex-shrink: 0;
   align-self: stretch;
 }
-div.main_topSideNavibar div.context_top_collapse div.context_top div.heading {
+div.main_topSideNavibar div.context_top_collapse div.context_side div.heading {
   height: 60px;
   padding: 0px 22px 0px 16px;
   display: flex;
@@ -111,17 +111,17 @@ div.main_topSideNavibar div.context_top_collapse div.context_top div.heading {
   align-items: center;
   align-self: stretch;
 }
-div.main_topSideNavibar div.context_top_collapse div.context_top div.heading .ic {
+div.main_topSideNavibar div.context_top_collapse div.context_side div.heading .ic {
   width: 27px;
   height: 27px;
   color: #000;
   cursor: pointer;
   transition: all 0.4s;
 }
-div.main_topSideNavibar div.context_top_collapse div.context_top div.heading .ic:hover {
+div.main_topSideNavibar div.context_top_collapse div.context_side div.heading .ic:hover {
   color: darkgrey;
 }
-div.main_topSideNavibar div.context_top_collapse div.context_top a {
+div.main_topSideNavibar div.context_top_collapse div.context_side a {
   text-decoration: none;
   height: 50px;
   padding: 0px 15px;
@@ -137,14 +137,17 @@ div.main_topSideNavibar div.context_top_collapse div.context_top a {
   font-weight: 400;
   line-height: normal;
 }
-div.main_topSideNavibar div.context_top_collapse div.context_top a:hover {
+div.main_topSideNavibar div.context_top_collapse div.context_side a:hover {
   padding: 0px 15px 0px 30px;
+  background: #C6C6C6;
+}
+div.main_topSideNavibar div.context_top_collapse div.context_side a.actived {
   background: #C6C6C6;
 }
 div.main_topSideNavibar div.context_top_collapse.open {
   opacity: 1;
 }
-div.main_topSideNavibar div.context_top_collapse.open div.context_top {
+div.main_topSideNavibar div.context_top_collapse.open div.context_side {
   transform: translateX(0);
 }
 div.main_topSideNavibar div.context_main {
