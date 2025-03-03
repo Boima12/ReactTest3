@@ -1,14 +1,13 @@
-import styles from './sideTopNavibar_tracking.module.css';
+import styles from './sideTopNavibar.module.css';
 import { useState, useRef, useEffect } from 'react';
 
 
-function Co_sideTopNavibar_tracking() {
+function Co_sideTopNavibar() {
   const [pageSection, setPageSection] = useState(1);
   const component1Ref = useRef();
   const component2Ref = useRef();
   const component3Ref = useRef();
   const component4Ref = useRef();
-
 
   // Track scroll position
   const handleScroll = () => {
@@ -41,7 +40,6 @@ function Co_sideTopNavibar_tracking() {
   }, []);
 
 
-
   const scrollToComponent1 = () => {
     if (component1Ref.current && pageSection !== 1) {
       setPageSection(1);
@@ -71,7 +69,7 @@ function Co_sideTopNavibar_tracking() {
   };
 
   return (
-    <div className={styles.main_sideTopNavibar_tracking}>
+    <div className={styles.main_sideTopNavibar}>
       <div className={styles.context_side}>
         <div className={`${styles.bookmark} ${pageSection == 1 ? styles.actived : ""}`} onClick={scrollToComponent1}>
           <p>bookmark 1</p>
@@ -90,26 +88,27 @@ function Co_sideTopNavibar_tracking() {
         </div>
       </div>
 
-      <div className={styles.context_main}>
-        <div className={styles.context_side_nav}>
-          <div className={`${styles.bookmark} ${pageSection == 1 ? styles.actived : ""}`} onClick={scrollToComponent1}>
-            <p>bookmark 1</p>
-          </div>
-
-          <div className={`${styles.bookmark} ${pageSection == 2 ? styles.actived : ""}`} onClick={scrollToComponent2}>
-            <p>bookmark 2</p>
-          </div>
-
-          <div className={`${styles.bookmark} ${pageSection == 3 ? styles.actived : ""}`} onClick={scrollToComponent3}>
-            <p>bookmark 3</p>
-          </div>
-
-          <div className={`${styles.bookmark} ${pageSection == 4 ? styles.actived : ""}`} onClick={scrollToComponent4}>
-            <p>bookmark 4</p>
-          </div>          
+      <div className={styles.context_top}>
+        <div className={`${styles.bookmark} ${pageSection == 1 ? styles.actived : ""}`} onClick={scrollToComponent1}>
+          <p>bookmark 1</p>
         </div>
 
-        {/* assuming these below is components (use forwardRef) */}
+        <div className={`${styles.bookmark} ${pageSection == 2 ? styles.actived : ""}`} onClick={scrollToComponent2}>
+          <p>bookmark 2</p>
+        </div>
+
+        <div className={`${styles.bookmark} ${pageSection == 3 ? styles.actived : ""}`} onClick={scrollToComponent3}>
+          <p>bookmark 3</p>
+        </div>
+
+        <div className={`${styles.bookmark} ${pageSection == 4 ? styles.actived : ""}`} onClick={scrollToComponent4}>
+          <p>bookmark 4</p>
+        </div>          
+      </div>
+      <div className={styles.context_top_spacer}></div>
+
+      <div className={styles.context_main}>
+        {/* assuming these below is components (use Zustand) */}
         <div className={styles.component1} ref={component1Ref}></div>
         <div className={styles.component2} ref={component2Ref}></div>
         <div className={styles.component3} ref={component3Ref}></div>
@@ -120,4 +119,4 @@ function Co_sideTopNavibar_tracking() {
   );
 }
 
-export default Co_sideTopNavibar_tracking
+export default Co_sideTopNavibar

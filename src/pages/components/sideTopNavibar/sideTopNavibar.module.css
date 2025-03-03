@@ -1,13 +1,15 @@
-div.main_sideTopNavibar_tracking {
+div.main_sideTopNavibar {
   overflow-x: hidden;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
-div.main_sideTopNavibar_tracking div.context_side {
+div.main_sideTopNavibar div.context_side {
   width: 120px;
   height: 100vh;
   background: #222;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +18,7 @@ div.main_sideTopNavibar_tracking div.context_side {
   align-items: flex-start;
   flex-shrink: 0;
 }
-div.main_sideTopNavibar_tracking div.context_side div.bookmark {
+div.main_sideTopNavibar div.context_side div.bookmark {
   height: 102px;
   opacity: 0.7;
   cursor: pointer;
@@ -28,7 +30,7 @@ div.main_sideTopNavibar_tracking div.context_side div.bookmark {
   gap: 12px;
   align-self: stretch;
 }
-div.main_sideTopNavibar_tracking div.context_side div.bookmark p {
+div.main_sideTopNavibar div.context_side div.bookmark p {
   color: #FFF;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -36,16 +38,64 @@ div.main_sideTopNavibar_tracking div.context_side div.bookmark p {
   font-weight: 400;
   line-height: normal;
 }
-div.main_sideTopNavibar_tracking div.context_side div.bookmark:hover {
+div.main_sideTopNavibar div.context_side div.bookmark:hover {
   opacity: 0.9;
   background: #000;
 }
-div.main_sideTopNavibar_tracking div.context_side div.bookmark.actived {
+div.main_sideTopNavibar div.context_side div.bookmark.actived {
   cursor: default;
   opacity: 0.9;
   background: #000;
 }
-div.main_sideTopNavibar_tracking div.context_main {
+div.main_sideTopNavibar div.context_top {
+  width: 100%;
+  height: 34px;
+  background: black;
+  transition: all 0.4s;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  display: none;
+}
+div.main_sideTopNavibar div.context_top div.bookmark {
+  height: 100%;
+  cursor: pointer;
+  transition: all 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+}
+div.main_sideTopNavibar div.context_top div.bookmark p {
+  transition: all 1s;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+div.main_sideTopNavibar div.context_top div.bookmark:hover {
+  background: #C2C2C2;
+}
+div.main_sideTopNavibar div.context_top div.bookmark:hover p {
+  color: #000;
+}
+div.main_sideTopNavibar div.context_top div.bookmark.actived {
+  cursor: default;
+  background: #C2C2C2;
+}
+div.main_sideTopNavibar div.context_top div.bookmark.actived p {
+  color: #000;
+}
+div.main_sideTopNavibar div.context_top_spacer {
+  width: 100%;
+  height: 34px;
+  display: none;
+}
+div.main_sideTopNavibar div.context_main {
   width: calc(100% - 120px);
   margin-left: 120px;
   box-sizing: border-box;
@@ -55,65 +105,22 @@ div.main_sideTopNavibar_tracking div.context_main {
   align-items: center;
   gap: 128px;
 }
-div.main_sideTopNavibar_tracking div.context_main div.context_side_nav {
-  width: 100%;
-  height: 34px;
-  background: black;
-  transition: all 0.4s;
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  align-items: center;
-  display: none;
-}
-div.main_sideTopNavibar_tracking div.context_main div.context_side_nav div.bookmark {
-  height: 100%;
-  cursor: pointer;
-  transition: all 1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 0 0;
-}
-div.main_sideTopNavibar_tracking div.context_main div.context_side_nav div.bookmark p {
-  transition: all 1s;
-  color: #FFF;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-div.main_sideTopNavibar_tracking div.context_main div.context_side_nav div.bookmark:hover {
-  background: #C2C2C2;
-}
-div.main_sideTopNavibar_tracking div.context_main div.context_side_nav div.bookmark:hover p {
-  color: #000;
-}
-div.main_sideTopNavibar_tracking div.context_main div.context_side_nav div.bookmark.actived {
-  cursor: default;
-  background: #C2C2C2;
-}
-div.main_sideTopNavibar_tracking div.context_main div.context_side_nav div.bookmark.actived p {
-  color: #000;
-}
-div.main_sideTopNavibar_tracking div.context_main div.component1 {
+div.main_sideTopNavibar div.context_main div.component1 {
   width: 100%;
   height: 1000px;
   background: lightgoldenrodyellow;
 }
-div.main_sideTopNavibar_tracking div.context_main div.component2 {
+div.main_sideTopNavibar div.context_main div.component2 {
   width: 100%;
   height: 1000px;
   background: lightcoral;
 }
-div.main_sideTopNavibar_tracking div.context_main div.component3 {
+div.main_sideTopNavibar div.context_main div.component3 {
   width: 100%;
   height: 1000px;
   background: lightgreen;
 }
-div.main_sideTopNavibar_tracking div.context_main div.component4 {
+div.main_sideTopNavibar div.context_main div.component4 {
   width: 100%;
   height: 1000px;
   background: lightskyblue;
@@ -121,32 +128,38 @@ div.main_sideTopNavibar_tracking div.context_main div.component4 {
 
 /* Extra small devices (phones, below 600px) */
 @media only screen and (min-width: 320px) and (max-width: 599.9px) {
-  div.main_sideTopNavibar_tracking div.context_side {
+  div.main_sideTopNavibar div.context_side {
     display: none;
   }
-  div.main_sideTopNavibar_tracking div.context_main {
+  div.main_sideTopNavibar div.context_top {
+    display: flex;
+  }
+  div.main_sideTopNavibar div.context_top_spacer {
+    display: block;
+  }
+  div.main_sideTopNavibar div.context_main {
     width: 100%;
     margin-left: 0;
     gap: 64px;
-  }
-  div.main_sideTopNavibar_tracking div.context_main div.context_side_nav {
-    display: flex;
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 767.9px) {
-  div.main_sideTopNavibar_tracking div.context_side {
+  div.main_sideTopNavibar div.context_side {
     display: none;
   }
-  div.main_sideTopNavibar_tracking div.context_main {
+  div.main_sideTopNavibar div.context_top {
+    display: flex;
+  }
+  div.main_sideTopNavibar div.context_top_spacer {
+    display: block;
+  }
+  div.main_sideTopNavibar div.context_main {
     width: 100%;
     margin-left: 0;
     gap: 64px;
   }
-  div.main_sideTopNavibar_tracking div.context_main div.context_side_nav {
-    display: flex;
-  }
-  div.main_sideTopNavibar_tracking div.context_main {
+  div.main_sideTopNavibar div.context_main {
     gap: 128px;
   }
 }
@@ -154,4 +167,4 @@ div.main_sideTopNavibar_tracking div.context_main div.component4 {
 /* Large devices (laptops/desktops, 992px and up) */
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
-/*# sourceMappingURL=sideTopNavibar_tracking.module.css.map */
+/*# sourceMappingURL=sideTopNavibar.module.css.map */

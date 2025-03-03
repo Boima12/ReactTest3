@@ -1,15 +1,22 @@
-div.main_sideTopNavibar_tracking {
+$context_side_width: 120px;
+$context_top_height: 34px;
+
+
+
+div.main_sideTopNavibar {
     overflow-x: hidden;     // position: fixed; issue
 
     width: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
 
     div.context_side {
-        width: 120px;
+        width: $context_side_width;
         height: 100vh;
         background: #222;
+        overflow-y: scroll;
 
         position: fixed;
         top: 0;
@@ -56,9 +63,74 @@ div.main_sideTopNavibar_tracking {
         }
     }
 
+    div.context_top {
+        width: 100%;
+        height: $context_top_height;
+        background: black;
+
+        transition: all 0.4s;
+
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        // display: flex;
+        align-items: center; 
+        
+        display: none;
+
+        div.bookmark {
+            height: 100%;
+            cursor: pointer;
+
+            transition: all 1s;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0 0;      
+            
+            p {
+                transition: all 1s;
+
+                color: #FFF;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;                    
+            }
+
+            &:hover {
+                background: #C2C2C2;
+
+                p {
+                    color: #000;
+                }
+            }
+
+            &.actived {
+                cursor: default;
+                background: #C2C2C2;
+
+                p {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    div.context_top_spacer {
+        width: 100%;
+        height: $context_top_height;
+
+        display: none;
+    }
+
     div.context_main {
-        width: calc(100% - 120px);
-        margin-left: 120px;
+        width: calc(100% - $context_side_width);
+        margin-left: $context_side_width;
         // padding: 12px 24px;
         box-sizing: border-box;
         background: #000;
@@ -67,64 +139,6 @@ div.main_sideTopNavibar_tracking {
         flex-direction: column;
         align-items: center;
         gap: 128px;  
-        
-        div.context_side_nav {
-            width: 100%;
-            height: 34px;
-            background: black;
-
-            transition: all 0.4s;
-
-            z-index: 10;
-            position: fixed;
-            top: 0;
-            left: 0;
-
-            // display: flex;
-            align-items: center; 
-            
-            display: none;
-
-            div.bookmark {
-                height: 100%;
-                cursor: pointer;
-
-                transition: all 1s;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex: 1 0 0;      
-                
-                p {
-                    transition: all 1s;
-
-                    color: #FFF;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-size: 12px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;                    
-                }
-
-                &:hover {
-                    background: #C2C2C2;
-
-                    p {
-                        color: #000;
-                    }
-                }
-
-                &.actived {
-                    cursor: default;
-                    background: #C2C2C2;
-
-                    p {
-                        color: #000;
-                    }
-                }
-            }
-        }
 
         // delete these div.component(s)
         div.component1 {
@@ -155,24 +169,27 @@ div.main_sideTopNavibar_tracking {
             background: lightskyblue;
         }
     }
-
 }
 
 
 @mixin screen320 {
-    div.main_sideTopNavibar_tracking {
+    div.main_sideTopNavibar {
         div.context_side {
             display: none;
+        }
+
+        div.context_top {
+            display: flex;
+        }
+
+        div.context_top_spacer {
+            display: block;
         }
 
         div.context_main {
             width: 100%;
             margin-left: 0;
             gap: 64px;
-
-            div.context_side_nav {
-                display: flex;
-            }
         }
     }
 }
@@ -180,7 +197,7 @@ div.main_sideTopNavibar_tracking {
 @mixin screen600 {
     @include screen320;
 
-    div.main_sideTopNavibar_tracking {
+    div.main_sideTopNavibar {
         div.context_main {
             gap: 128px;
         }
@@ -194,12 +211,10 @@ div.main_sideTopNavibar_tracking {
 }
 
 
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 767.9px) {
     @include screen600;
 }
-
 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -208,16 +223,13 @@ div.main_sideTopNavibar_tracking {
 } 
 
 
-
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1199.9px) {
 
 } 
 
 
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) and (max-width: 1535.9px) {
 
 } 
-
