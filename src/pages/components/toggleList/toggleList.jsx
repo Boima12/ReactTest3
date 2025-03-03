@@ -13,10 +13,9 @@ function Co_toggleList() {
         <div className={styles.main_toggleList}>
 
             <ul className={styles.menu1}>
-                <li onClick={triggerMenu1_1}>
+                <li onClick={triggerMenu1_1} style={{background: isMenu1_1Open ? "#e1e1e1" : "initial"}}>
                     <p>toggle menu1_1</p>
-                    <FontAwesomeIcon icon="fa-solid fa-caret-right" className={styles.ic} style={{display: isMenu1_1Open ? "none" : "inline-block"}}/>
-                    <FontAwesomeIcon icon="fa-solid fa-caret-down" className={styles.ic} style={{display: isMenu1_1Open ? "inline-block" : "none"}}/>                    
+                    <FontAwesomeIcon icon="fa-solid fa-caret-right" className={styles.ic} style={{transform: isMenu1_1Open ? "rotate(90deg)" : "none"}}/>                  
                 </li>
 
                 <ul className={styles.menu1_1} ref={menu1_1Ref}>

@@ -31,6 +31,7 @@ div.main_toggleList ul.menu1 li p {
 }
 div.main_toggleList ul.menu1 li .ic {
   color: #000;
+  transition: all 0.4s;
 }
 div.main_toggleList ul.menu1 li .ic:nth-of-type(1) {
   width: 10.002px;
@@ -51,7 +52,7 @@ div.main_toggleList ul.menu1 ul.menu1_1 {
   margin: 0;
   transition: all 0.5s;
   overflow: hidden;
-  height: 0;
+  max-height: 0;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
@@ -65,7 +66,7 @@ div.main_toggleList ul.menu1 ul.menu1_1 li:hover {
   padding-left: 40px;
 }
 div.main_toggleList ul.menu1 ul.menu1_1.open {
-  height: 200px;
+  max-height: 210px;
 }
 
 /*# sourceMappingURL=toggleList.module.css.map */
